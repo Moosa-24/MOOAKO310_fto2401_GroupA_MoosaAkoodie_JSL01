@@ -17,3 +17,6 @@ function validateSyntax() {
     // Check if input starts with 'pet_' and followed by alphanumeric characters
         document.getElementById('result').innerText = result;
 }
+
+/* having a problem when it comes to cd ./ finding folder so i couldn't add the commit that i am being marked on.
+this is it: "Added Regular expression to match the desired syntax & code for Checking if the input matches the regex pattern" */
