@@ -4,9 +4,16 @@ function validateSyntax() {
     let result = ''; // Placeholder for validation result
 
     // TODO: Write your validation logic here
-        // Check if input starts with 'pet_' and followed by alphanumeric characters
+    
+    let regex = /^pet_(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z0-9]+$/;// Regular expression to match the desired syntax - the ?=.* & .*\d are positive lookahead assertions according to having 1 number or at least 1 letter after pet_
 
-            document.getElementById('result').innerText = result;
+    // Checking if the input matches the regex pattern - .test() should return true or false accordingly
+        if (regex.test(input)) {
+        result = 'Valid Syntax';
+    } else {
+        result = 'Invalid Syntax';
+    }
+    
+    // Check if input starts with 'pet_' and followed by alphanumeric characters
+        document.getElementById('result').innerText = result;
 }
-
-
